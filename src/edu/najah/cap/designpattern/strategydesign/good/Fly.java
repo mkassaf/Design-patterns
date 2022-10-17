@@ -1,4 +1,4 @@
-package edu.najah.cap.designpattern.good;
+package edu.najah.cap.designpattern.strategydesign.good;
 
 public class Fly {
 

@@ -1,7 +1,7 @@
-package edu.najah.cap.designpattern.good;
+package edu.najah.cap.designpattern.strategydesign.good;
 
-import edu.najah.cap.designpattern.good.intf.Flyable;
-import edu.najah.cap.designpattern.good.intf.Quackable;
+import edu.najah.cap.designpattern.strategydesign.good.intf.Flyable;
+import edu.najah.cap.designpattern.strategydesign.good.intf.Quackable;
 
 public class Duck {
 

@@ -1,4 +1,4 @@
-package edu.najah.cap.designpattern.viaInhernetance;
+package edu.najah.cap.designpattern.strategydesign.viaInhernetance;
 
 public class Duck3 extends Duck {
 

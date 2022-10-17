@@ -1,6 +1,6 @@
-package edu.najah.cap.designpattern.good.impl;
+package edu.najah.cap.designpattern.strategydesign.good.impl;
 
-import edu.najah.cap.designpattern.good.intf.Quackable;
+import edu.najah.cap.designpattern.strategydesign.good.intf.Quackable;
 
 public class Quack implements Quackable {
     @Override

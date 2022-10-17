@@ -1,4 +1,4 @@
-package edu.najah.cap.designpattern.viaInterface.viaInhernetance;
+package edu.najah.cap.designpattern.strategydesign.viaInterface;
 
 public abstract class Duck {
 

@@ -1,6 +1,6 @@
-package edu.najah.cap.designpattern.good.impl;
+package edu.najah.cap.designpattern.strategydesign.good.impl;
 
-import edu.najah.cap.designpattern.good.intf.Flyable;
+import edu.najah.cap.designpattern.strategydesign.good.intf.Flyable;
 
 public class NormalFly implements Flyable {
     @Override

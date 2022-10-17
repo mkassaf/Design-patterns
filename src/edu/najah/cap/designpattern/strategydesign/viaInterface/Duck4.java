@@ -1,7 +1,7 @@
-package edu.najah.cap.designpattern.viaInterface.viaInhernetance;
+package edu.najah.cap.designpattern.strategydesign.viaInterface;
 
-import edu.najah.cap.designpattern.viaInterface.viaInhernetance.intf.Flyable;
-import edu.najah.cap.designpattern.viaInterface.viaInhernetance.intf.Swimable;
+import edu.najah.cap.designpattern.strategydesign.viaInterface.intf.Flyable;
+import edu.najah.cap.designpattern.strategydesign.viaInterface.intf.Swimable;
 
 public class Duck4 extends Duck implements Swimable, Flyable {
 
