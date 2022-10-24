@@ -1,10 +1,13 @@
-package edu.najah.cap.designpattern.prototype.bad;
+package edu.najah.cap.designpattern.prototype.good;
 
 public class Color implements Cloneable{
     private int red;
     private int green;
     private int blue;
 
+    static {
+        System.out.println("I am scaning Color class");
+    }
     public Color(int red, int green, int blue) {
         this.red = red;
         this.green = green;
@@ -45,12 +48,17 @@ public class Color implements Cloneable{
         return this.red + ", " + this.green + " ," + this.blue;
     }
 
-    public Color copy(){
-        Color copy =  new Color(this);
-        return copy;
+    @Override
+    public Object clone(){
+        Object object = null;
+        try {
+            object = super.clone();
+        } catch (CloneNotSupportedException e){
+            System.err.println(e.getMessage());
+        }
+        return object;
+
     }
-
-
 
 
 }
