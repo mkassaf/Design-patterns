@@ -1,0 +1,8 @@
+package edu.najah.cap.designpattern.factory.good.database;
+
+public class PostgreeDatabase implements Database {
+    @Override
+    public void execute(String query) {
+
+    }
+}
