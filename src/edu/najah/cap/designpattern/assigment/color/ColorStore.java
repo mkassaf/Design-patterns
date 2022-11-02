@@ -6,6 +6,10 @@ import static edu.najah.cap.designpattern.assigment.color.Color.generateColorKey
 
 public class ColorStore {
 
+    /**
+     * Color store component will make sure only one object will be created for each color
+     *
+     */
     private static final HashMap<String, Color> colors = new HashMap<>();
 
     static {
