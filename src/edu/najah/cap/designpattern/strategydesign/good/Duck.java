@@ -20,13 +20,14 @@ public class Duck {
 
     public void fly(){
         if (fly != null){
-            quack.quack();
+            fly.fly();
         }
     }
 
     public void quack(){
         if (quack != null){
-            fly.fly();
+            quack.quack();
+
         }
     }
 
