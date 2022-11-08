@@ -9,6 +9,8 @@ public class Subject implements ISubject {
     private ArrayList<Observer> observers = null;
     private int value;
 
+    private int topic;
+
     public Subject(){
         observers = new ArrayList<>();
     }
@@ -46,5 +48,11 @@ public class Subject implements ISubject {
     public void setValue(int value) {
         this.value = value;
         notifyObservers();
+    }
+
+
+    public void setTopic(int topic) {
+        notifyObservers();
+        this.topic = topic;
     }
 }

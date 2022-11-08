@@ -3,6 +3,8 @@ package edu.najah.cap.designpattern.decorator.decorator;
 import edu.najah.cap.designpattern.decorator.component.Drink;
 
 public class Milk extends Decorator {
+    private static final double COST_FOR_MILK = 10;
+
     public Milk(Drink drink) {
         super(drink);
     }
@@ -14,6 +16,7 @@ public class Milk extends Decorator {
 
     @Override
     public double cost() {
-        return baseDrink.cost() + 2;
+
+        return baseDrink.cost() + COST_FOR_MILK;
     }
 }

@@ -6,6 +6,9 @@ public class Color {
     private final int blue;
 
 
+    private ColorPrinter colorPrinter;
+
+
 
     protected Color(int red, int green, int blue) {
         this.red = red;
@@ -57,7 +60,18 @@ public class Color {
     }
 
     public void print(){
-        System.out.println(this);
+        if (colorPrinter != null){
+            colorPrinter.print();
+        } else {
+            System.out.println(this);
+        }
     }
 
+    public ColorPrinter getColorPrinter() {
+        return colorPrinter;
+    }
+
+    public void setColorPrinter(ColorPrinter colorPrinter) {
+        this.colorPrinter = colorPrinter;
+    }
 }

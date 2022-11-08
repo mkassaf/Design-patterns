@@ -13,10 +13,10 @@ public class App {
         Subject subject = new Subject();
 
 
-        Student student = new Student();
+        Student student = new Student(subject);
         Book book = new Book();
 
-        subject.registerObserver(student);//Student object register itself to Subject
+        //subject.registerObserver(student);//Student object register itself to Subject
         subject.registerObserver(book);//Book object register itself to Subject
 
         subject.setValue(0);//Both should be notified

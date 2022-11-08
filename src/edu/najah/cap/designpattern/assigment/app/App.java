@@ -14,11 +14,15 @@ public class App {
         Color blue2 = ColorStore.getInstance(255,0,0);
         Color blue3 = ColorStore.getInstance(0,0,0);
 
+        Color white = ColorStore.getInstance(255,255,255);
+
         System.out.println(color2 == color);//true
 
         color.print();
         blue.print();
         blue3.print();
         blue2.print();
+
+        white.print();
     }
 }

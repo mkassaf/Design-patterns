@@ -8,13 +8,29 @@ public class ColorFactory {
         Color instance = null;
 
         if (red == 0 && green ==0 && blue == 0){
-            return new Black();
+            Color black = new Color(0,0,0);
+
+            //inline class
+            black.setColorPrinter(new ColorPrinter() {
+                @Override
+                public void print() {
+                    System.out.println("Black");
+                }
+            });
+            return black;
         }
         if (red == 255 && green ==255 && blue == 255){
-            return new White();
+            Color white = new Color(0,0,0);
+
+            white.setColorPrinter(() -> {
+                System.out.println("White");
+            });
+            return white;
         }
         if (red == 0 && green ==0 && blue == 255){
-            return new Blue();
+            Color color = new Color(0,0,255);
+            color.setColorPrinter(new BluePrinter());
+            return color;
         }
         if (red == 0 && green ==255 && blue == 0){
             return new Green();

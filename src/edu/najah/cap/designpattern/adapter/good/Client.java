@@ -6,7 +6,16 @@ public class Client {
 
         NewSystem newSystem = new NewSystemAdpater();
 
+        LegacySystem legacySystem = new LegacySystem();
+
+
+
+        //accept(legacySystem); does not support legcy code
+
+
+        NewSystem newSystemAdpater = new NewSystemAdpater();
         accept(newSystem);
+        accept(newSystemAdpater);//
     }
 
     public static void accept(NewSystem system){

@@ -12,7 +12,7 @@ public class NewSystemAdpater implements NewSystem {
     public Result getResult() {
         String strResult = legacySystem.getStringResult();
         //From string to Result object
-        String[] arrayOfString= strResult.split(":");
+        String[] arrayOfString= strResult.split(":");// ["Name", "Id"]
         //validate arrayOfString
         Result result = new Result();
         result.setId(Integer.parseInt(arrayOfString[1]));

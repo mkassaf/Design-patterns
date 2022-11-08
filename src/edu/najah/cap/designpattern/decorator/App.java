@@ -9,11 +9,11 @@ public class App {
 
     public static void main(String[] args) {
 
-        Drink tea = new Tea();
+        Tea tea = new Tea();
         System.out.println(tea.getDescription());
         System.out.println(tea.cost());
 
-        Drink teaWithMilk = new Milk(tea);
+        Milk teaWithMilk = new Milk(tea);
         System.out.println(teaWithMilk.getDescription());
         System.out.println(teaWithMilk.cost());
 

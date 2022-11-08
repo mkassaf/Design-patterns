@@ -4,6 +4,9 @@ public class App {
 
     public static void main(String[] args) {
 
+
+        Internet realInternet = new RealInternet();
+
         Internet connection = new InternetProxcy(new RealInternet());
         Internet connection2 = new InternetProxcy(new SecureInternet());
 
