@@ -2,31 +2,30 @@ package edu.najah.cap.designpattern.singleton.good;
 
 public class Database {
 
-    private static Database instance = null;
-
     private String url;
     private Boolean status;
 
-    public  static  Database getConnection(String url){
-        System.out.println("getConnection .. ");// 12
-        if (instance == null) {
-            System.out.println("Wait in synchronized block");//4
-            synchronized (Database.class) {//stop here ...
-                if (instance == null) {// not null
-                    System.out.println("Establishing the db connection once!");//once
-                    instance = new Database(url);
-                }
-            }
-        }
-
-        return instance;
-    }
-
+    private static Database database = null;
 
     private Database(String url) {
         status = false;
         this.url = url;
         connect(this.url);
+    }
+
+    //synchronized to make sure only one thread can access this method at a time
+    public static  Database getInstance(String url) {
+        //if no object created yet, create new object and return it
+        //else return the existing object
+        if (database == null) {
+            //Double check locking
+            synchronized (Database.class) {
+                if (database == null) {
+                    database =  new Database(url);
+                }
+            }
+        }
+        return database;
     }
 
     /**
@@ -53,8 +52,23 @@ public class Database {
         if (!this.status){
             connect(this.url);
         }
-        //System.out.println("Executing query: " + query);
+        System.out.println("Executing query: " + query);
         return "This is the result";
     }
+    @Override
+    public boolean equals(Object obj) { // accepts Object of any type
+        if (obj != null && this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Database)) {
+            return false;
+        }
+        Database database = (Database) obj;
+        if( this.url.equals(database.url)) {
+            return true;
+        }
+        return false;
+    }
+
 
 }

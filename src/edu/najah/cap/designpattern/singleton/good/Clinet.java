@@ -8,8 +8,7 @@ public class Clinet {
 
     private int id;
     public void runQuery(String query) {
-        //System.out.println("Prepare for query " + query);
-        database = Database.getConnection(DATABASE_URL);
+        database = Database.getInstance(DATABASE_URL);
         database.executeQuery(query);
     }
 

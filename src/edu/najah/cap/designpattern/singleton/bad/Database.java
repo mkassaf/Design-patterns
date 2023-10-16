@@ -39,5 +39,20 @@ public class Database {
         System.out.println("Executing query: " + query);
         return "This is the result";
     }
+    @Override
+    public boolean equals(Object obj) { // accepts Object of any type
+        if (obj != null && this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Database)) {
+            return false;
+        }
+        Database database = (Database) obj;
+        if( this.url.equals(database.url)) {
+            return true;
+        }
+        return false;
+    }
+
 
 }
