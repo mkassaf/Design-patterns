@@ -8,6 +8,20 @@ public class App {
 
 
     public static void main(String[] args) throws InterruptedException {
+
+        Database database = Database.getInstance("url1");
+        Database database2 = Database.getInstance("url2");
+
+        System.out.println(database.getUrl());
+        System.out.println(database2.getUrl());
+
+        if (database == database2) {
+            System.out.println("Same instance");
+        } else {
+            System.out.println("Not the same instance");
+        }
+
+
         Date start = new Date();
         List<String> queries = List.of(
                 "select * from info",

@@ -14,6 +14,17 @@ public class App {
         System.out.println(ColorStore.colors.get("Red"));//255,0,0
         System.out.println(deeplCopyRed);//255,0,0
 
+        if (ColorStore.colors.get("Red") == deeplCopyRed) {
+            System.out.println("Same object");
+        } else {
+            System.out.println("Not same object");
+        }
+        if (ColorStore.colors.get("Red").equals(deeplCopyRed)) {
+            System.out.println("Same values");
+        } else {
+            System.out.println("Not same values");
+        }
+
         deeplCopyRed.setBlue(1);
         deeplCopyRed.setGreen(1);
 

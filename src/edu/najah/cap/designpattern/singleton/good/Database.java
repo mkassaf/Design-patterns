@@ -70,5 +70,9 @@ public class Database {
         return false;
     }
 
+    String getUrl() {
+        return url;
+    }
+
 
 }

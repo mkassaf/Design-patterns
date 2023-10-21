@@ -3,13 +3,13 @@ package edu.najah.cap.designpattern.factory.good.database;
 
 public class DatabaseFactory {
 
-    public static Database createInstance(String databaseName) {
+    public static Database createInstance(DatabaseType type) {
         Database database = null;
-        if (databaseName.equals("MySQLDatabase")){
+        if (type.equals(DatabaseType.MySQLDatabase)) {
             database = new MySQLDatabase();
-        } else if (databaseName.equals("PostgreeDatabase")){
+        } else if (DatabaseType.PostgreeDatabase.equals(type)){
             database = new PostgreeDatabase();
-        } else if (databaseName.equals("SQLiteDatabase")){
+        } else if (DatabaseType.SQLiteDatabase.equals(type)){
             database = new SQLiteDatabase();
         }
         return database;

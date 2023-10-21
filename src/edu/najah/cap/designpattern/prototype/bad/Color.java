@@ -51,6 +51,18 @@ public class Color implements Cloneable{
     }
 
 
+    @Override
+    public boolean equals(Object object) {
+        if (object == null) {
+            return false;
+        }
+        if (!(object instanceof Color)) {
+            return false;
+        }
+        Color color = (Color) object;
+        return this.red == color.getRed() && this.green == color.getGreen() && this.blue == color.getBlue();
+    }
+
 
 
 }

@@ -1,6 +1,6 @@
 package edu.najah.cap.designpattern.prototype.good;
 
-public class Color implements Cloneable{
+public class Color implements Cloneable {
     private int red;
     private int green;
     private int blue;
@@ -49,7 +49,19 @@ public class Color implements Cloneable{
     }
 
     @Override
-    public Object clone(){
+    public boolean equals(Object object) {
+        if (object == null) {
+            return false;
+        }
+        if (!(object instanceof Color)) {
+            return false;
+        }
+        Color color = (Color) object;
+        return this.red == color.red && this.green == color.green && this.blue == color.blue;
+    }
+
+    @Override
+    public Object clone() {
         Object object = null;
         try {
             object = super.clone();
