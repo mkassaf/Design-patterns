@@ -13,6 +13,8 @@ public class RealInternet implements Internet {
     private boolean isAllowed(String url) {
         if (url.contains("facebook")){
             return false;
+        } else if (url.contains("youtube")) {
+            return false;
         }
         return true;
     }

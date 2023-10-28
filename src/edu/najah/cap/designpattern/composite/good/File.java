@@ -1,6 +1,6 @@
 package edu.najah.cap.designpattern.composite.good;
 
-public class File implements  FileSystem{
+public class File implements  FileSystem {
 
 
     private int size;

@@ -3,7 +3,7 @@ package edu.najah.cap.designpattern.composite.good;
 import java.util.ArrayList;
 import java.util.SplittableRandom;
 
-public class Folder implements  FileSystem {
+public class Folder implements FileSystem {
 
     private String name;
     /**
