@@ -16,7 +16,6 @@ public class Milk extends Decorator {
 
     @Override
     public double cost() {
-
         return baseDrink.cost() + COST_FOR_MILK;
     }
 }
