@@ -5,7 +5,7 @@ import edu.najah.cap.designpattern.observer.observer.Student;
 import edu.najah.cap.designpattern.observer.subject.ISubject;
 import edu.najah.cap.designpattern.observer.subject.Subject;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class App {
 
@@ -15,9 +15,10 @@ public class App {
 
         Student student = new Student(subject);
         Book book = new Book();
-
+        Book book2 = new Book();
         //subject.registerObserver(student);//Student object register itself to Subject
         subject.registerObserver(book);//Book object register itself to Subject
+        subject.registerObserver(book2);//Book object register itself to Subject
 
         subject.setValue(0);//Both should be notified
 
@@ -31,6 +32,7 @@ public class App {
             System.out.println("subject.value " + subject.getValue());
             System.out.println("student.value " + student.getValue());
             System.out.println("book.value " + book.getValue());
+            System.out.println("book2.value " + book2.getValue());
 
 
             if (value == 0){
