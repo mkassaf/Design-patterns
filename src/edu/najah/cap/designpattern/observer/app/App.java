@@ -11,6 +11,7 @@ public class App {
 
     public static void main(String[] args) {
         Subject subject = new Subject();
+        Subject bookCount = new Subject();
 
 
         Student student = new Student(subject);
